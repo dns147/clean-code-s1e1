@@ -5,30 +5,30 @@
   font-family: Lato, sans-serif;
 }
 
-.header {
+.page__header {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
 
-.header-img {
+.page__header_img {
   width: 100%;
 }
 
-.header .more-inf {
+.page__header .page__header_link {
   font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
 
-  .header { 
+  .page__header { 
     text-align: center;
   }
 
 }
 
-.centered-element {
+.mainly {
   display: block;
   width: 500px;
   margin: 0 auto 0;
@@ -40,7 +40,7 @@
   flex-grow: 1;
 }
 
-.task-row-wrapper {
+.mainly__task_row_wrapper {
   display: flex;
 }
 
@@ -50,12 +50,12 @@
   padding: 0px;
 }
 
-.section-title, 
-.save-mode {
+.mainly__title, 
+.mainly__save_mode {
   list-style: none;
 }
 
-.del-outline {
+.del__outline {
   outline: none;
 }
 
@@ -74,8 +74,8 @@
 }
 
 /* Heading */
-.section-title, 
-.label-new-task {
+.mainly__title, 
+.mainly__label_new_task {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -85,7 +85,7 @@
   text-transform: uppercase;
 }
 
-.input-text {
+.input__text {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -98,12 +98,12 @@
   color: #888;
 }
 
-.input-text:focus {
+.input__text:focus {
   color: #333;
 }
 
 /* New Task */
-.label-new-task {
+.mainly__label_new_task {
   display: block;
   margin: 0 0 20px;
 }
@@ -113,7 +113,7 @@
 }
 
 /* Task list */
-.list {
+.mainly__list {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -122,32 +122,32 @@
   align-items: center;
 }
 
-.list > * {
+.mainly__list > * {
   vertical-align: middle;
 }
 
-.list > input[type="checkbox"] {
+.mainly__list > input[type="checkbox"] {
   margin: 0 10px;
 }
 
-.list > label {
+.mainly__list > label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-.list > input[type="text"] {
+.mainly__list > input[type="text"] {
   width: 226px;
 }
 
-.delete-img {
+.delete__img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-button.delete img:hover {
+.delete__img:hover {
   transform: rotateZ(0);
 }
 
@@ -162,11 +162,11 @@ ul li input[type=text] {
   display: none;
 }
 
-ul li.edit-mode input[type=text] {
+ul li.mainly__edit_mode input[type=text] {
   display: inline-block;
   width: 224px;
 }
 
-ul li.edit-mode label {
+ul li.mainly__edit_mode label {
   display: none;
 }

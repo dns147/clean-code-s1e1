@@ -38,19 +38,19 @@ var createNewTaskElement=function(taskString){
   //Each elements, needs appending
   checkBox.type="checkbox";
   editInput.type="text";
-  editInput.className="task input-text";
+  editInput.className="task input__text del__outline";
 
   editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
   editButton.className="button edit";
 
   deleteButton.className="button delete";
   deleteButtonImg.src='./remove.svg';
-  deleteButtonImg.className="delete-img";
+  deleteButtonImg.className="delete__img";
   deleteButton.appendChild(deleteButtonImg);
 
 
   //and appending.
-  listItem.className="list";
+  listItem.className="mainly__list";
   listItem.appendChild(checkBox);
   listItem.appendChild(label);
   listItem.appendChild(editInput);
@@ -84,10 +84,10 @@ var editTask=function(){
 
   var listItem=this.parentNode;
 
-  var editInput=listItem.querySelector('.input-text');
+  var editInput=listItem.querySelector('.input__text');
   var label=listItem.querySelector("label");
   var editBtn=listItem.querySelector(".edit");
-  var containsClass=listItem.classList.contains("edit-mode");
+  var containsClass=listItem.classList.contains("mainly__edit_mode");
   //If class of the parent is .edit-mode
   if(containsClass){
 
@@ -101,7 +101,7 @@ var editTask=function(){
   }
 
     //toggle .edit-mode on the parent.
-    listItem.classList.toggle("edit-mode");
+    listItem.classList.toggle("mainly__edit_mode");
 };
 
 

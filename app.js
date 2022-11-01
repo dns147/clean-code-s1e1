@@ -87,6 +87,7 @@ var editTask=function(){
 
   var editInput=listItem.querySelector('.input__text');
   var label=listItem.querySelector("label");
+  label.className="task mainly__edit_mode_label";
   var editBtn=listItem.querySelector(".edit");
   var containsClass=listItem.classList.contains("mainly__edit_mode");
   //If class of the parent is .edit-mode
@@ -95,6 +96,7 @@ var editTask=function(){
     //switch to .edit-mode
     //label becomes the inputs value.
     label.innerText=editInput.value;
+    label.classList.remove("mainly__edit_mode_label");
     editBtn.innerText="Edit";
   }else{
     editInput.value=label.innerText;
@@ -124,9 +126,16 @@ var taskCompleted=function(){
 
   //Append the task list item to the #completed-tasks
   var listItem=this.parentNode;
+  var label=listItem.querySelector("label");
+  label.className="task complete__line";
   completedTasksHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskIncomplete);
 
+  var containsClass=listItem.classList.contains("mainly__edit_mode");
+
+  if(containsClass){
+    label.className="input__hide";
+  }
 }
 
 
@@ -136,6 +145,8 @@ var taskIncomplete=function(){
   //When the checkbox is unchecked
   //Append the task list item to the #incomplete-tasks.
   var listItem=this.parentNode;
+  var label=listItem.querySelector("label");
+  label.classList.remove("complete__line");
   incompleteTaskHolder.appendChild(listItem);
   bindTaskEvents(listItem,taskCompleted);
 }

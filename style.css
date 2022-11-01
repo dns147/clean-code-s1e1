@@ -20,7 +20,7 @@
   font-family: fantasy, cursive;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
 
   .page__header { 
     text-align: center;
@@ -152,21 +152,22 @@
 }
 
 /* Completed */
-#completed-tasks label {
+.complete__line {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-.input__text_hide {
+.input__text_hide,
+.input__hide {
   display: none;
 }
 
-ul li.mainly__edit_mode .input__text_hide {
+.mainly__edit_mode .input__text_hide {
   display: inline-block;
   width: 224px;
 }
 
-ul li.mainly__edit_mode label {
+.mainly__edit_mode_label {
   display: none;
 }

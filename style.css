@@ -126,7 +126,7 @@
   vertical-align: middle;
 }
 
-.mainly__list > input[type="checkbox"] {
+.mainly__list > .mainly__list_checkbox {
   margin: 0 10px;
 }
 
@@ -137,7 +137,7 @@
   width: 226px;
 }
 
-.mainly__list > input[type="text"] {
+.mainly__list > .input__text_hide {
   width: 226px;
 }
 
@@ -158,11 +158,11 @@
 }
 
 /* Edit Task */
-ul li input[type=text] {
+.input__text_hide {
   display: none;
 }
 
-ul li.mainly__edit_mode input[type=text] {
+ul li.mainly__edit_mode .input__text_hide {
   display: inline-block;
   width: 224px;
 }

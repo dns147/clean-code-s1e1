@@ -12,11 +12,11 @@
   text-align: right;
 }
 
-.page__header_img {
+.header_img {
   width: 100%;
 }
 
-.page__header .page__header_link {
+.page__header .header_link {
   font-family: fantasy, cursive;
 }
 
